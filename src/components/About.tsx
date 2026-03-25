@@ -8,18 +8,24 @@ export default function About() {
     <section id="about" className="section-padding bg-warm-white">
       <div className="max-w-[1600px] mx-auto px-8 xl:px-12">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
-          {/* Image */}
+          {/* Image - Linley's photo placeholder */}
           <ScrollReveal direction="left">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-sage/10 to-rose/10 rounded-3xl" />
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/media/media1.png"
-                  alt="Nurturing mother illustration for Restore Coaching"
-                  width={700}
-                  height={875}
-                  className="w-full h-auto object-cover"
-                />
+                {/* Placeholder until Linley's headshot is uploaded */}
+                <div className="w-full aspect-[4/5] bg-gradient-to-br from-sage/5 via-cream to-rose/5 flex items-center justify-center">
+                  <div className="text-center p-10">
+                    <div className="w-32 h-32 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-sage">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                      </svg>
+                    </div>
+                    <p className="text-sage font-medium text-lg">Linley&apos;s Photo</p>
+                    <p className="text-charcoal-light text-base mt-2">Coming Soon</p>
+                  </div>
+                </div>
               </div>
             </div>
           </ScrollReveal>

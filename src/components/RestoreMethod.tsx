@@ -39,13 +39,13 @@ export default function RestoreMethod() {
               The Methodology
             </p>
             <h2 className="font-[var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl font-semibold text-charcoal mb-4 leading-tight">
-              The RESTORE Method™
+              The RESTORE Method
             </h2>
             <div className="decorative-line" />
             <p className="mt-8 text-charcoal-light max-w-3xl mx-auto leading-relaxed text-xl">
               A trauma-informed approach that supports women through birth,
               motherhood, and parenting. This guides every step of the Restore
-              Motherhood Journey™.
+              Motherhood Journey.
             </p>
           </div>
         </ScrollReveal>

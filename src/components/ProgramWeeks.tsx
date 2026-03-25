@@ -4,7 +4,7 @@ import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Leaf, Sprout, Battery, Brain, Target, HeartHandshake, Star, Sparkles } from "lucide-react";
+import { Leaf, Compass, Battery, Brain, Target, HeartHandshake, Star, Sparkles } from "lucide-react";
 
 const weeks = [
   {
@@ -18,11 +18,11 @@ const weeks = [
   },
   {
     week: "Week 2",
-    title: "Growing Independence. What Am I Raising?",
+    title: "Who Am I Raising?",
     restoreWord: "Explore",
     desc: "Shift your focus from managing behaviour to intentionally raising an independent, resilient, and secure child.",
     outcome: "Parent with purpose, not just reaction.",
-    Icon: Sprout,
+    Icon: Compass,
   },
   {
     week: "Week 3",
@@ -98,7 +98,7 @@ export default function ProgramWeeks() {
             </p>
             <div className="decorative-line" />
             <p className="mt-6 text-sage font-medium italic text-lg">
-              Guided by the RESTORE Method™
+              Guided by the RESTORE Method
             </p>
           </div>
         </ScrollReveal>
@@ -184,6 +184,22 @@ export default function ProgramWeeks() {
             );
           })}
         </div>
+
+        {/* Decorative image - mother watering child */}
+        <ScrollReveal delay={0.2}>
+          <div className="mt-20 flex justify-center">
+            <div className="relative max-w-md">
+              <div className="absolute -inset-4 bg-gradient-to-br from-sage/10 to-rose/10 rounded-3xl blur-xl" />
+              <Image
+                src="/media/media1.png"
+                alt="Nurturing mother and child illustration"
+                width={500}
+                height={625}
+                className="relative w-full h-auto rounded-2xl"
+              />
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

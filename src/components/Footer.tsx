@@ -6,6 +6,8 @@ const footerLinks = [
   { label: "Birth Debrief", href: "#birth-debrief" },
   { label: "Programs", href: "#programs" },
   { label: "Journey", href: "#journey" },
+  { label: "Life Coaching", href: "#life-coaching" },
+  { label: "EQ Coaching", href: "#eq-coaching" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];

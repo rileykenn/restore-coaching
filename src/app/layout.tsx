@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Restore Coaching | Birth Trauma, Motherhood & Parenting Support by Linley",
   description:
-    "Certified life coach and midwife supporting women through birth trauma healing, motherhood transitions, confident parenting, and emotional intelligence coaching. Trauma informed, non clinical support with the RESTORE Method™.",
+    "Certified life coach and midwife supporting women through birth trauma healing, motherhood transitions, confident parenting, and emotional intelligence coaching. Trauma informed, non clinical support with the RESTORE Method.",
   keywords: [
     "birth trauma coaching",
     "birth debrief",
