@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-:root {
-  --background: #FBF8F4;
-  --foreground: #2C2C2C;
+@theme inline {
+  --color-background: #FBF8F4;
+  --color-foreground: #2C2C2C;
   --color-cream: #FBF8F4;
   --color-cream-dark: #F3EDE5;
   --color-sage: #7C9A82;
@@ -15,47 +15,32 @@
   --color-charcoal: #2C2C2C;
   --color-charcoal-light: #4A4A4A;
   --color-warm-white: #FDFCFA;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-cream: var(--color-cream);
-  --color-cream-dark: var(--color-cream-dark);
-  --color-sage: var(--color-sage);
-  --color-sage-light: var(--color-sage-light);
-  --color-sage-dark: var(--color-sage-dark);
-  --color-rose: var(--color-rose);
-  --color-rose-light: var(--color-rose-light);
-  --color-rose-dark: var(--color-rose-dark);
-  --color-taupe: var(--color-taupe);
-  --color-charcoal: var(--color-charcoal);
-  --color-charcoal-light: var(--color-charcoal-light);
-  --color-warm-white: var(--color-warm-white);
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
 }
 
+/*
+  IMPORTANT: These styles are placed OUTSIDE @layer so they have
+  the highest specificity and behave identically in both dev and
+  production builds. This is the fix for Tailwind v4 dev/prod parity.
+*/
 html {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
-/* Use @layer base to ensure these survive Tailwind's production purge */
-@layer base {
-  body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-inter), system-ui, sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+body {
+  background: #FBF8F4;
+  color: #2C2C2C;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-playfair), Georgia, serif;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), Georgia, serif;
 }
 
 /* Custom scrollbar */
@@ -63,14 +48,14 @@ html {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-cream);
+  background: #FBF8F4;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-sage-light);
+  background: #A8C5AE;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-sage);
+  background: #7C9A82;
 }
 
 /* Section spacing utility */
@@ -94,7 +79,7 @@ html {
 .decorative-line {
   width: 70px;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-sage), var(--color-rose));
+  background: linear-gradient(90deg, #7C9A82, #C9A89B);
   margin: 1.25rem auto;
   border-radius: 2px;
 }

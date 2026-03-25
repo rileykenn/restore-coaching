@@ -107,7 +107,7 @@ export default function ProgramWeeks() {
         <ScrollReveal delay={0.1}>
           <div className="mb-20 rounded-2xl overflow-hidden shadow-lg border border-sage/10">
             <Image
-              src="/media/pathway.png"
+              src="/updateddiagram.png"
               alt="Restore Confident Parenting 7 week program pathway visual showing the RESTORE Method journey from Reflect through Evolve"
               width={1400}
               height={450}
