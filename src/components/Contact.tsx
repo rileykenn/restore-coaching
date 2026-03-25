@@ -31,7 +31,7 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\n\nMessage:\n${formData.message}`
     );
-    window.open(`mailto:hello@restorecoaching.com.au?subject=${subject}&body=${body}`);
+    window.open(`mailto:lil@restore.coach?subject=${subject}&body=${body}`);
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
   };
@@ -67,7 +67,7 @@ export default function Contact() {
                   <div className="w-14 h-14 bg-sage/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-sage" />
                   </div>
-                  <span>hello@restorecoaching.com.au</span>
+                  <span>lil@restore.coach</span>
                 </div>
                 <div className="flex items-center gap-5 text-charcoal-light text-lg">
                   <div className="w-14 h-14 bg-sage/10 rounded-full flex items-center justify-center flex-shrink-0">
