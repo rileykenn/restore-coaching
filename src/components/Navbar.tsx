@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -53,14 +54,16 @@ export default function Navbar() {
               e.preventDefault();
               handleNavClick("#home");
             }}
-            className="flex flex-col"
+            className="flex items-center"
           >
-            <span className="font-[var(--font-playfair)] text-3xl font-semibold text-charcoal tracking-tight">
-              Restore
-            </span>
-            <span className="text-sm text-sage tracking-[0.25em] uppercase -mt-1">
-              Coaching
-            </span>
+            <Image
+              src="/RestoreLogo.svg"
+              alt="Restore Coaching"
+              width={320}
+              height={120}
+              className="h-28 w-auto"
+              priority
+            />
           </a>
 
           {/* Desktop Links */}

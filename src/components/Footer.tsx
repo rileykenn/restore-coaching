@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const footerLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
@@ -25,12 +27,13 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-6">
-              <span className="font-[var(--font-playfair)] text-3xl text-white font-semibold block">
-                Restore
-              </span>
-              <span className="text-sage-light text-sm tracking-[0.25em] uppercase">
-                Coaching
-              </span>
+              <Image
+                src="/RestoreLogo.svg"
+                alt="Restore Coaching"
+                width={160}
+                height={60}
+                className="h-14 w-auto brightness-0 invert opacity-90"
+              />
             </div>
             <p className="text-white/60 leading-relaxed text-base">
               Supporting women and families through the emotional journey of
@@ -88,6 +91,42 @@ export default function Footer() {
                     {s}
                   </span>
                 ))}
+              </div>
+            </div>
+
+            {/* Credential Badges */}
+            <div className="mt-8">
+              <h3 className="font-medium text-white mb-4 tracking-wide text-base">
+                Accreditations
+              </h3>
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                  <Image
+                    src="/AIPCBADGEBLACK.jpg"
+                    alt="AIPC Certified Coach"
+                    width={70}
+                    height={70}
+                    className="h-16 w-auto rounded-lg"
+                  />
+                </div>
+                <div className="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                  <Image
+                    src="/CertifiedCoachLogoAuthenticEducation.png"
+                    alt="Authentic Education Certified Results Coach"
+                    width={70}
+                    height={70}
+                    className="h-16 w-auto"
+                  />
+                </div>
+                <div className="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                  <Image
+                    src="/emotionalquotientinventory.png"
+                    alt="MHS EQ-i 2.0 Certified"
+                    width={70}
+                    height={70}
+                    className="h-16 w-auto"
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@ const weeks = [
   },
   {
     week: "Week 3",
-    title: "Energy. Where Is It All Going?",
+    title: "Where Are My Efforts Going?",
     restoreWord: "Soothe",
     desc: "Explore where your time, energy, and attention are being spent and what's actually effective.",
     outcome:
@@ -35,7 +35,7 @@ const weeks = [
   },
   {
     week: "Week 4",
-    title: "Self Regulation. Staying Calm in the Moment",
+    title: "Staying Calm in the Moment",
     restoreWord: "Trust",
     desc: "Understand your triggers and learn to regulate your nervous system during challenging moments.",
     outcome: "Respond with intention instead of reacting in overwhelm.",
@@ -52,7 +52,7 @@ const weeks = [
   },
   {
     week: "Week 6",
-    title: "Connection. Strengthening Your Relationship",
+    title: "Strengthening My Relationships",
     restoreWord: "Optimise",
     desc: "Deepen understanding of emotional connection and its impact on your child.",
     outcome:
@@ -61,7 +61,7 @@ const weeks = [
   },
   {
     week: "Week 7",
-    title: "The Bigger Picture. Parenting for the Long Term",
+    title: "Parenting for the Long-Term",
     restoreWord: "Evolve",
     desc: "Step out of quick fixes and into a grounded, long term approach to parenting.",
     outcome:
@@ -107,7 +107,7 @@ export default function ProgramWeeks() {
         <ScrollReveal delay={0.1}>
           <div className="mb-20 rounded-2xl overflow-hidden shadow-lg border border-sage/10">
             <Image
-              src="/updateddiagram.png"
+              src="/SRSDiagramPosterSize.png"
               alt="Restore Confident Parenting 7 week program pathway visual showing the RESTORE Method journey from Reflect through Evolve"
               width={1400}
               height={450}
@@ -117,8 +117,10 @@ export default function ProgramWeeks() {
           </div>
         </ScrollReveal>
 
-        {/* Accordion Weeks */}
-        <div className="max-w-[900px] mx-auto space-y-4">
+        {/* Accordion Weeks + Illustration Side by Side */}
+        <div className="grid lg:grid-cols-[1fr_380px] gap-12 items-start">
+          {/* Left: Accordion Weeks */}
+          <div className="space-y-4">
           {weeks.map((week, i) => {
             const IconComponent = week.Icon;
             return (
@@ -183,23 +185,24 @@ export default function ProgramWeeks() {
               </ScrollReveal>
             );
           })}
-        </div>
-
-        {/* Decorative image - mother watering child */}
-        <ScrollReveal delay={0.2}>
-          <div className="mt-20 flex justify-center">
-            <div className="relative max-w-md">
-              <div className="absolute -inset-4 bg-gradient-to-br from-sage/10 to-rose/10 rounded-3xl blur-xl" />
-              <Image
-                src="/media/media1.png"
-                alt="Nurturing mother and child illustration"
-                width={500}
-                height={625}
-                className="relative w-full h-auto rounded-2xl"
-              />
-            </div>
           </div>
-        </ScrollReveal>
+
+          {/* Right: Decorative illustration */}
+          <ScrollReveal delay={0.2}>
+            <div className="hidden lg:block sticky top-32">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-sage/10 to-rose/10 rounded-3xl blur-xl" />
+                <Image
+                  src="/media/media1.png"
+                  alt="Nurturing mother and child illustration"
+                  width={500}
+                  height={625}
+                  className="relative w-full h-auto rounded-2xl"
+                />
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
       </div>
     </section>
   );

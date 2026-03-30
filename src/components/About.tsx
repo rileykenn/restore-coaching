@@ -85,6 +85,31 @@ export default function About() {
                   </span>
                 ))}
               </div>
+
+              {/* Credential Badges */}
+              <div className="mt-8 flex flex-wrap items-center gap-5">
+                <Image
+                  src="/AIPCBADGEBLACK.jpg"
+                  alt="AIPC Certified Coach"
+                  width={80}
+                  height={80}
+                  className="h-20 w-auto rounded-xl shadow-sm"
+                />
+                <Image
+                  src="/CertifiedCoachLogoAuthenticEducation.png"
+                  alt="Authentic Education Certified Results Coach"
+                  width={80}
+                  height={80}
+                  className="h-20 w-auto"
+                />
+                <Image
+                  src="/emotionalquotientinventory.png"
+                  alt="MHS EQ-i 2.0 Certified"
+                  width={80}
+                  height={80}
+                  className="h-20 w-auto"
+                />
+              </div>
             </div>
           </ScrollReveal>
         </div>
