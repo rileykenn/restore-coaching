@@ -1,25 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const footerLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Birth Debrief", href: "#birth-debrief" },
-  { label: "Programs", href: "#programs" },
-  { label: "Journey", href: "#journey" },
-  { label: "Life Coaching", href: "#life-coaching" },
-  { label: "EQ Coaching", href: "#eq-coaching" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
-  const handleClick = (href: string) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <footer className="bg-charcoal text-white/80">
       <div className="max-w-[1600px] mx-auto px-8 xl:px-12 py-20">
@@ -37,7 +29,7 @@ export default function Footer() {
             </div>
             <p className="text-white/60 leading-relaxed text-base">
               Supporting women and families through the emotional journey of
-              motherhood. From birth story healing to confident, emotionally
+              parenthood. From birth story healing to confident, emotionally
               aware parenting.
             </p>
           </div>
@@ -50,12 +42,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => handleClick(link.href)}
+                  <Link
+                    href={link.href}
                     className="text-white/60 hover:text-sage-light transition-colors duration-300 text-base"
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

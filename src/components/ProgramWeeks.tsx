@@ -1,5 +1,6 @@
 "use client";
 
+
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 import { useState } from "react";
@@ -83,37 +84,16 @@ export default function ProgramWeeks() {
   const [openWeek, setOpenWeek] = useState<number | null>(0);
 
   return (
-    <section className="section-padding bg-warm-white">
+    <div className="bg-warm-white py-12">
       <div className="max-w-[1600px] mx-auto px-8 xl:px-12">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-sage tracking-[0.3em] uppercase text-base mb-4 font-medium">
-              The Program
+            <h3 className="font-[var(--font-playfair)] text-2xl md:text-3xl font-semibold text-charcoal mb-2">
+              Week by Week Breakdown
+            </h3>
+            <p className="text-charcoal-light text-lg">
+              Click each week to explore what you&apos;ll work through
             </p>
-            <h2 className="font-[var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl font-semibold text-charcoal mb-4 leading-tight">
-              Restore Confident Parenting
-            </h2>
-            <p className="text-charcoal-light text-xl">
-              7 Week Program + Integration Session
-            </p>
-            <div className="decorative-line" />
-            <p className="mt-6 text-sage font-medium italic text-lg">
-              Guided by the RESTORE Method
-            </p>
-          </div>
-        </ScrollReveal>
-
-        {/* Pathway Image */}
-        <ScrollReveal delay={0.1}>
-          <div className="mb-20 rounded-2xl overflow-hidden shadow-lg border border-sage/10">
-            <Image
-              src="/SRSDiagramPosterSize.png"
-              alt="Restore Confident Parenting 7 week program pathway visual showing the RESTORE Method journey from Reflect through Evolve"
-              width={1400}
-              height={450}
-              className="w-full h-auto"
-              priority
-            />
           </div>
         </ScrollReveal>
 
@@ -204,6 +184,6 @@ export default function ProgramWeeks() {
           </ScrollReveal>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

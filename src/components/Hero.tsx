@@ -1,14 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const handleScroll = (href: string) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section
       id="home"
@@ -58,7 +54,7 @@ export default function Hero() {
               className="text-xl text-charcoal-light leading-relaxed mb-12 max-w-2xl"
             >
               Supporting women and families through the emotional journey of
-              motherhood. From birth story healing to confident, emotionally
+              parenthood. From birth story healing to confident, emotionally
               aware parenting.
             </motion.p>
 
@@ -68,18 +64,18 @@ export default function Hero() {
               transition={{ delay: 0.9, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-5"
             >
-              <button
-                onClick={() => handleScroll("#programs")}
-                className="px-10 py-5 bg-sage text-white rounded-full text-lg font-medium hover:bg-sage-dark transition-all duration-300 hover:shadow-xl hover:shadow-sage/20 hover:-translate-y-0.5"
+              <Link
+                href="/services"
+                className="px-10 py-5 bg-sage text-white rounded-full text-lg font-medium hover:bg-sage-dark transition-all duration-300 hover:shadow-xl hover:shadow-sage/20 hover:-translate-y-0.5 text-center"
               >
-                Explore the Journey
-              </button>
-              <button
-                onClick={() => handleScroll("#contact")}
-                className="px-10 py-5 border-2 border-sage text-sage rounded-full text-lg font-medium hover:bg-sage hover:text-white transition-all duration-300"
+                Explore Services
+              </Link>
+              <Link
+                href="/contact"
+                className="px-10 py-5 border-2 border-sage text-sage rounded-full text-lg font-medium hover:bg-sage hover:text-white transition-all duration-300 text-center"
               >
                 Get in Touch
-              </button>
+              </Link>
             </motion.div>
           </motion.div>
 

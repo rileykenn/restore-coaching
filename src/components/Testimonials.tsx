@@ -64,7 +64,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" className="section-padding bg-warm-white relative overflow-hidden">
+    <section className="pt-32 pb-20 md:pb-28 px-8 bg-warm-white relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute left-0 bottom-0 w-1/3 opacity-8">
         <Image

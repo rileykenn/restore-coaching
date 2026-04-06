@@ -5,7 +5,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function About() {
   return (
-    <section id="about" className="section-padding bg-warm-white">
+    <section className="section-padding bg-warm-white">
       <div className="max-w-[1600px] mx-auto px-8 xl:px-12">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Image - Linley's photo placeholder */}
@@ -47,12 +47,14 @@ export default function About() {
                   I&apos;m a certified life coach having trained with both{" "}
                   <strong className="text-charcoal">AIPC</strong> and{" "}
                   <strong className="text-charcoal">Authentic Academy</strong>,
-                  specialising in birth trauma, motherhood, parent and emotional
-                  intelligence (EQ) coaching.
+                  specialising in birth trauma, motherhood, navigating parenting,
+                  and emotional intelligence (EQ) coaching&mdash;supporting
+                  parents to thrive, whether raising neurodiverse or neurotypical
+                  children.
                 </p>
                 <p>
                   I support women and families through the emotional journey of
-                  motherhood, helping them move from survival mode to feeling
+                  parenthood, helping them move from survival mode to feeling
                   safe, confident, and connected.
                 </p>
                 <p>

@@ -12,12 +12,13 @@ const beforeItems = [
   "You react in the moment and then question yourself afterwards",
   "You constantly feel guilty that you're 'not good enough' as a parent",
   "Parenting feels heavy, exhausting, and at times, isolating",
+  "You feel triggered and dysregulated by your child's crying, emotional outbursts and tantrums",
 ];
 
 const afterItems = [
   "You feel clear, calm, and confident in your parenting decisions",
   "You trust your instincts without needing constant external validation",
-  "You understand your child's needs and respond with intention",
+  "You understand your own needs, your child's needs and respond with intention",
   "You feel more emotionally regulated, even in challenging moments",
   "You parent in a way that fosters independence, resilience, and confidence",
   "You experience a stronger, more connected relationship with your child",
@@ -29,7 +30,7 @@ export default function BeforeAfter() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="programs" className="section-padding bg-cream">
+    <section className="section-padding bg-cream">
       <div className="max-w-[1600px] mx-auto px-8 xl:px-12">
         <ScrollReveal>
           <div className="text-center mb-20">

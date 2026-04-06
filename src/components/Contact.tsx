@@ -37,7 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section-padding bg-cream">
+    <section className="pt-32 pb-20 md:pb-28 px-8 bg-cream">
       <div className="max-w-[1600px] mx-auto px-8 xl:px-12">
         <div className="grid lg:grid-cols-2 gap-20 items-start">
           {/* Left Content */}
