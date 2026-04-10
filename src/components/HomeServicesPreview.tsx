@@ -8,7 +8,7 @@ import { Heart, Users, UserCheck, Brain, ArrowRight } from "lucide-react";
 
 const services = [
   {
-    title: "Birth Debrief & Motherhood Support",
+    title: "Birth Debrief & Motherhood Transition Support",
     desc: "Process your birth story, release guilt and overwhelm, and feel safe stepping into motherhood.",
     href: "/services/birth-debrief",
     Icon: Heart,
@@ -60,8 +60,7 @@ export default function HomeServicesPreview() {
             </h2>
             <div className="decorative-line" />
             <p className="mt-8 text-charcoal-light max-w-3xl mx-auto leading-relaxed text-xl">
-              All coaching services are available in a format that works best for
-              you and your family.
+              Restore how you show up in life, relationships, and parenting.
             </p>
           </div>
         </ScrollReveal>
@@ -105,6 +104,18 @@ export default function HomeServicesPreview() {
             );
           })}
         </div>
+
+        {/* Your RESTORE Experience Button */}
+        <ScrollReveal delay={0.3}>
+          <div className="text-center mt-16">
+            <Link
+              href="/services/restore-experience"
+              className="px-10 py-5 bg-sage text-white rounded-full text-lg font-medium hover:bg-sage-dark transition-all duration-300 hover:shadow-xl hover:shadow-sage/20 hover:-translate-y-0.5 inline-block"
+            >
+              Your RESTORE Experience
+            </Link>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -9,13 +9,13 @@ import { Star, ArrowRight } from "lucide-react";
 const featuredTestimonials = [
   {
     quote:
-      "Thanks to Linley at Restore Coaching, I've learned how to communicate with my kids calmly and effectively without ever needing to raise my voice. The tools I've gained have made a world of difference in our family dynamics.",
+      "Thanks to Lil at Restore Coaching, I've learned how to communicate with my kids calmly and effectively without ever needing to raise my voice. The tools I've gained have made a world of difference in our family dynamics.",
     name: "Rachael",
     stars: 5,
   },
   {
     quote:
-      "Working with Linley in the Confident Parenting Program has been truly transformative for me as a parent. She gave me a practical, easy-to-follow framework that I could actually use in real-life moments.",
+      "Working with Lil in the Confident Parenting Program has been truly transformative for me as a parent. She gave me a practical, easy-to-follow framework that I could actually use in real-life moments.",
     name: "Katie",
     stars: 5,
   },

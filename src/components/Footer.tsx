@@ -7,6 +7,7 @@ const footerLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Packages", href: "/packages" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Contact", href: "/contact" },
 ];
@@ -20,7 +21,7 @@ export default function Footer() {
           <div>
             <div className="mb-6">
               <Image
-                src="/RestoreLogo.svg"
+                src="/newlogo.png"
                 alt="Restore Coaching"
                 width={160}
                 height={60}
@@ -127,7 +128,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-base text-white/40">
           <p>
-            © {new Date().getFullYear()} Restore Coaching, Linley. All rights
+            © {new Date().getFullYear()} Restore Coaching, Lil. All rights
             reserved.
           </p>
           <p className="text-sm">

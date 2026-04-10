@@ -10,72 +10,72 @@ import { Leaf, Compass, Battery, Brain, Target, HeartHandshake, Star, Sparkles }
 const weeks = [
   {
     week: "Week 1",
-    title: "Foundations. What Matters Most",
-    restoreWord: "Reflect",
-    desc: "Clarify your values, your parenting vision, and what truly matters to you.",
+    title: "You become clear and anchored",
+    restoreWord: "Recognise",
+    desc: "You reconnect with what truly matters, your values, your vision, and the kind of parent you want to be.",
     outcome:
-      "Stop comparing, stop second guessing, and begin parenting in alignment with your values.",
+      "Instead of comparing or second-guessing yourself, you begin to feel grounded and guided by what's true for you.",
     Icon: Leaf,
   },
   {
     week: "Week 2",
-    title: "Who Am I Raising?",
+    title: "You become intentional and aware",
     restoreWord: "Explore",
-    desc: "Shift your focus from managing behaviour to intentionally raising an independent, resilient, and secure child.",
-    outcome: "Parent with purpose, not just reaction.",
+    desc: "You start to see your child and yourself with fresh eyes.",
+    outcome: "With deeper awareness of your patterns and influence, you begin parenting with purpose, not autopilot.",
     Icon: Compass,
   },
   {
     week: "Week 3",
-    title: "Where Are My Efforts Going?",
-    restoreWord: "Soothe",
-    desc: "Explore where your time, energy, and attention are being spent and what's actually effective.",
+    title: "You become focused and energised",
+    restoreWord: "Shift",
+    desc: "You let go of the patterns that drain you and pull you off course.",
     outcome:
-      "Let go of draining patterns and focus on what truly supports you and your child.",
+      "Your time, energy, and attention begin to align with what actually supports connection, growth, and resilience.",
     Icon: Battery,
   },
   {
     week: "Week 4",
-    title: "Staying Calm in the Moment",
-    restoreWord: "Trust",
-    desc: "Understand your triggers and learn to regulate your nervous system during challenging moments.",
-    outcome: "Respond with intention instead of reacting in overwhelm.",
+    title: "You become calm and responsive in the moment",
+    restoreWord: "Transform",
+    desc: "You understand your triggers and learn how to regulate your nervous system.",
+    outcome: "Instead of reacting in overwhelm, you begin responding with intention, steadiness, and clarity.",
     Icon: Brain,
   },
   {
     week: "Week 5",
-    title: "What's In My Control?",
-    restoreWord: "Respond",
-    desc: "Learn to distinguish between what is within your control and what isn't, so you can parent effectively without unnecessary stress.",
+    title: "You become empowered and grounded",
+    restoreWord: "Own",
+    desc: "You release the weight of what was never yours to carry.",
     outcome:
-      "Gain clarity, empowerment, and the ability to let go of unproductive worry or pressure.",
+      "By focusing on what is within your control, you feel lighter, clearer, and more confident in how you show up each day.",
     Icon: Target,
   },
   {
     week: "Week 6",
-    title: "Strengthening My Relationships",
-    restoreWord: "Optimise",
-    desc: "Deepen understanding of emotional connection and its impact on your child.",
+    title: "You become deeply connected",
+    restoreWord: "Reinforce",
+    desc: "You strengthen the emotional connection with your child in a way that feels natural and secure.",
     outcome:
-      "Build a secure, trusting relationship that supports behaviour, emotional safety, and wellbeing.",
+      "Your child experiences you as safe, consistent, and understanding, and your relationship becomes a place of trust.",
     Icon: HeartHandshake,
   },
   {
     week: "Week 7",
-    title: "Parenting for the Long-Term",
-    restoreWord: "Evolve",
-    desc: "Step out of quick fixes and into a grounded, long term approach to parenting.",
+    title: "You become consistent and confident",
+    restoreWord: "Embody",
+    desc: "This is where it all comes together.",
     outcome:
-      "Navigate challenges with confidence and resilience as your child grows.",
+      "You move beyond insight into a way of parenting that feels steady, aligned, and sustainable, no matter what stage you're in.",
     Icon: Star,
   },
   {
     week: "1 Month Later",
-    title: "Integration Session",
+    title: "You become supported for the long-term",
     restoreWord: "Integrate",
-    desc: "Reflect, integrate, and refine your learning to continue applying your newfound confidence, clarity, and emotional awareness.",
+    desc: "You return with real-life experience, refine what's working, and strengthen what's still growing.",
     outcome:
-      "Ongoing support to parent with intention and connection as new challenges arise.",
+      "You continue forward feeling supported, capable, and confident to navigate whatever comes next.",
     Icon: Sparkles,
   },
 ];
@@ -88,11 +88,12 @@ export default function ProgramWeeks() {
       <div className="max-w-[1600px] mx-auto px-8 xl:px-12">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <h3 className="font-[var(--font-playfair)] text-2xl md:text-3xl font-semibold text-charcoal mb-2">
-              Week by Week Breakdown
+            <h3 className="font-[var(--font-playfair)] text-2xl md:text-3xl font-semibold text-charcoal mb-4">
+              Restore Confident Parenting Journey
             </h3>
-            <p className="text-charcoal-light text-lg">
-              Click each week to explore what you&apos;ll work through
+            <p className="text-charcoal-light text-lg max-w-2xl mx-auto leading-relaxed">
+              This isn&apos;t about learning more strategies. It&apos;s about
+              becoming the parent you already have the capacity to be.
             </p>
           </div>
         </ScrollReveal>
@@ -153,7 +154,6 @@ export default function ProgramWeeks() {
                           </p>
                           <div className="mt-5 bg-sage/5 rounded-xl p-5">
                             <p className="text-base text-sage-dark">
-                              <strong className="text-sage">Outcome:</strong>{" "}
                               {week.outcome}
                             </p>
                           </div>

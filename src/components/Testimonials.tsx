@@ -9,7 +9,7 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Thanks to Linley at Restore Coaching, I've learned how to communicate with my kids calmly and effectively without ever needing to raise my voice. The tools I've gained have made a world of difference in our family dynamics.",
+      "Thanks to Lil at Restore Coaching, I've learned how to communicate with my kids calmly and effectively without ever needing to raise my voice. The tools I've gained have made a world of difference in our family dynamics.",
     name: "Rachael",
     stars: 5,
   },
@@ -39,13 +39,13 @@ const testimonials = [
   },
   {
     quote:
-      "I recently completed Linley's Emotional Intelligence coaching course, and it honestly helped me so much. She helped me understand how to manage my emotions and deal with difficult personalities at work, which has been life changing. I've stopped relying on others to treat me differently and now I approach work with calm and confidence. Highly recommend it to anyone wanting to grow personally and emotionally.",
+      "I recently completed Lil's Emotional Intelligence coaching course, and it honestly helped me so much. She helped me understand how to manage my emotions and deal with difficult personalities at work, which has been life changing. I've stopped relying on others to treat me differently and now I approach work with calm and confidence. Highly recommend it to anyone wanting to grow personally and emotionally.",
     name: "Leanne",
     stars: 5,
   },
   {
     quote:
-      "Working with Linley in the Confident Parenting Program has been truly transformative for me as a parent. She gave me a practical, easy-to-follow framework that I could actually use in real-life moments. One of the most valuable things Linley helped me recognise was what is within my control as a parent. That shift alone was incredibly empowering. Most importantly, this experience has brought genuine healing to my relationship with my child. I now feel equipped to support my children while also encouraging their independence, resilience, and problem-solving skills.",
+      "Working with Lil in the Confident Parenting Program has been truly transformative for me as a parent. She gave me a practical, easy-to-follow framework that I could actually use in real-life moments. One of the most valuable things Lil helped me recognise was what is within my control as a parent. That shift alone was incredibly empowering. Most importantly, this experience has brought genuine healing to my relationship with my child. I now feel equipped to support my children while also encouraging their independence, resilience, and problem-solving skills.",
     name: "Katie",
     stars: 5,
   },

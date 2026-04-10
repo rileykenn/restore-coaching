@@ -9,6 +9,7 @@ const serviceOptions = [
   "Birth Debrief & Story Healing",
   "Motherhood Transitional Coaching",
   "Restore Confident Parenting Program",
+  "Life Coaching",
   "EQ Assessment & Coaching",
   "General Enquiry",
 ];
@@ -69,11 +70,14 @@ export default function Contact() {
                   </div>
                   <span>lil@restore.coach</span>
                 </div>
-                <div className="flex items-center gap-5 text-charcoal-light text-lg">
-                  <div className="w-14 h-14 bg-sage/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-5 text-charcoal-light text-lg">
+                  <div className="w-14 h-14 bg-sage/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <MapPin className="w-6 h-6 text-sage" />
                   </div>
-                  <span>Online sessions available Australia wide</span>
+                  <div className="space-y-1">
+                    <span className="block">Coaching sessions available worldwide or via phone</span>
+                    <span className="block text-base text-charcoal-light/80">Face to face &mdash; Lake Macquarie and Newcastle region (office or in-home visits)</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -131,11 +135,12 @@ export default function Contact() {
                       htmlFor="contact-phone"
                       className="block text-base font-medium text-charcoal mb-2"
                     >
-                      Phone
+                      Phone *
                     </label>
                     <input
                       id="contact-phone"
                       type="tel"
+                      required
                       value={formData.phone}
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })

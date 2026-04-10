@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Restore Coaching | Birth Trauma, Parenthood & Parenting Support by Linley",
+  title: "Restore Coaching | Birth Trauma, Parenthood & Parenting Support by Lil",
   description:
     "Certified life coach and midwife supporting women through birth trauma healing, motherhood transitions, confident parenting, and emotional intelligence coaching. Trauma informed, non clinical support with the RESTORE Method.",
   keywords: [
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "neurotypical parenting",
   ],
   openGraph: {
-    title: "Restore Coaching by Linley",
+    title: "Restore Coaching by Lil",
     description:
       "Helping you move from survival mode to feeling safe, confident, and connected in parenthood.",
     type: "website",

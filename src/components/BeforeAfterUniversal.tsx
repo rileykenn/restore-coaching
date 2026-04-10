@@ -1,33 +1,37 @@
 "use client";
 
-import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Check } from "lucide-react";
 
 const beforeItems = [
-  "You feel unsure if you're \"doing it right\"",
-  "You second guess your decisions and look to others for reassurance",
-  "You feel overwhelmed by your child's behaviour or changing needs",
-  "You react in the moment and then question yourself afterwards",
-  "You constantly feel guilty that you're 'not good enough' as a parent",
-  "Parenting feels heavy, exhausting, and at times, isolating",
-  "You feel triggered and dysregulated by your child's crying, emotional outbursts and tantrums",
-  "You feel disrespected, frustrated and unsure how to handle it",
+  "Reactive and overwhelmed",
+  "Operating on autopilot",
+  "Emotionally triggered",
+  "Self-doubt and second-guessing",
+  "Driven by old patterns",
+  "Struggling in relationships",
+  "Feeling stuck or frustrated",
+  "Inconsistent responses",
+  "Focused on external control",
+  "Surviving day-to-day",
 ];
 
 const afterItems = [
-  "You feel clear, calm, and confident in your parenting decisions",
-  "You trust your instincts without needing constant external validation",
-  "You understand your own needs, your child's needs and respond with intention",
-  "You feel more emotionally regulated, even in challenging moments",
-  "You parent in a way that fosters independence, resilience, and confidence",
-  "You experience a stronger, more connected relationship with your child",
-  "You believe in yourself and you believe in your child",
+  "Calm, intentional, and grounded",
+  "Living with awareness and choice",
+  "Emotionally aware and responsive",
+  "Clarity and confidence in decisions",
+  "Aligned with values and desired identity",
+  "Communicating with clarity and connection",
+  "Experiencing growth and forward movement",
+  "Steady and intentional in how you show up",
+  "Taking ownership from within",
+  "Living with purpose and intention",
 ];
 
-export default function BeforeAfter() {
+export default function BeforeAfterUniversal() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -40,12 +44,12 @@ export default function BeforeAfter() {
               The Transformation
             </p>
             <h2 className="font-[var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl font-semibold text-charcoal mb-4 leading-tight">
-              The Restore Shift
+              The RESTORE Shift
             </h2>
             <div className="decorative-line" />
             <p className="mt-8 text-charcoal-light max-w-3xl mx-auto leading-relaxed text-xl">
-              The moment where you move from self doubt and survival to
-              confident, regulated, and intentional parenting.
+              The moment where you move from self-doubt and survival to
+              confident, regulated and intentional living.
             </p>
           </div>
         </ScrollReveal>
@@ -122,31 +126,13 @@ export default function BeforeAfter() {
         <ScrollReveal delay={0.4}>
           <div className="text-center mt-16 max-w-4xl mx-auto">
             <p className="font-[var(--font-playfair)] text-2xl md:text-3xl text-charcoal italic leading-relaxed">
-              From second guessing and overwhelm to calm, confident, and
-              connected parenting.
+              From autopilot and overwhelm to intentional, aligned, and
+              confident living.
             </p>
             <p className="mt-6 text-charcoal-light text-lg">
-              Where you trust yourself, respond with intention, and raise a child
-              who feels secure, capable, and understood.
+              Where you trust yourself, respond with intention, and show up in
+              life, relationships, and parenting with clarity and purpose.
             </p>
-            <p className="mt-8 font-[var(--font-playfair)] text-xl md:text-2xl text-charcoal italic leading-relaxed">
-              When you know who you are as a parent, you can lead your child
-              from a place of abundance, not overwhelm fear and uncertainty.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-5 justify-center">
-              <Link
-                href="/contact"
-                className="px-10 py-5 bg-sage text-white rounded-full text-lg font-medium hover:bg-sage-dark transition-all duration-300 hover:shadow-xl hover:shadow-sage/20 hover:-translate-y-0.5"
-              >
-                Book a Session
-              </Link>
-              <Link
-                href="/services"
-                className="px-10 py-5 border-2 border-sage text-sage rounded-full text-lg font-medium hover:bg-sage hover:text-white transition-all duration-300"
-              >
-                Back to Services
-              </Link>
-            </div>
           </div>
         </ScrollReveal>
       </div>

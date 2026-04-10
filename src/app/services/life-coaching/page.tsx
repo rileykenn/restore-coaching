@@ -34,9 +34,9 @@ export default function LifeCoachingPage() {
       />
 
       {/* Offerings */}
-      <section className="section-padding bg-warm-white">
+      <section className="py-12 md:py-16 px-8 bg-warm-white">
         <div className="max-w-[1600px] mx-auto px-8 xl:px-12">
-          <div ref={ref} className="grid md:grid-cols-2 gap-10 max-w-[1000px] mx-auto">
+          <div ref={ref} className="grid md:grid-cols-2 gap-8 max-w-[1000px] mx-auto">
             {offerings.map((item, i) => {
               const IconComponent = item.Icon;
               return (
@@ -45,7 +45,7 @@ export default function LifeCoachingPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: i * 0.2, duration: 0.6 }}
-                  className="bg-white rounded-3xl p-10 md:p-12 shadow-sm border border-sage/10 hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+                  className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-sage/10 hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
                 >
                   <div className="w-16 h-16 bg-rose/10 rounded-2xl flex items-center justify-center mb-6">
                     <IconComponent className="w-8 h-8 text-rose" />
@@ -63,7 +63,7 @@ export default function LifeCoachingPage() {
 
           {/* Topics covered */}
           <ScrollReveal delay={0.3}>
-            <div className="mt-16 max-w-[800px] mx-auto text-center">
+            <div className="mt-10 max-w-[800px] mx-auto text-center">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <Lightbulb className="w-6 h-6 text-sage" />
                 <p className="text-sage font-medium text-lg">
@@ -95,8 +95,8 @@ export default function LifeCoachingPage() {
 
           {/* Booking CTA */}
           <ScrollReveal delay={0.4}>
-            <div className="mt-16 max-w-[600px] mx-auto text-center">
-              <div className="bg-sage/5 rounded-3xl p-10 md:p-12 border border-sage/10">
+            <div className="mt-10 max-w-[600px] mx-auto text-center">
+              <div className="bg-sage/5 rounded-3xl p-8 md:p-10 border border-sage/10">
                 <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Calendar className="w-8 h-8 text-sage" />
                 </div>
