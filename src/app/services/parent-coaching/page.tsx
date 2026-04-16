@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ServicePageHero from "@/components/ServicePageHero";
 import ScrollReveal from "@/components/ScrollReveal";
-import RestoreMethod from "@/components/RestoreMethod";
+
 import BeforeAfter from "@/components/BeforeAfter";
 import ProgramWeeks from "@/components/ProgramWeeks";
 import { motion, useInView } from "framer-motion";
@@ -234,10 +234,7 @@ export default function ParentCoachingPage() {
       </section>
 
 
-      {/* ═══════════════════════════════════════════
-          RESTORE Method + Before/After Shift
-      ═══════════════════════════════════════════ */}
-      <RestoreMethod />
+
       <BeforeAfter />
     </>
   );

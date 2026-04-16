@@ -30,10 +30,11 @@ export default function About() {
           <ScrollReveal delay={0.2}>
             <div>
               <p className="text-sage tracking-[0.3em] uppercase text-base mb-4 font-medium">
-                About
+                About Lil
               </p>
               <h2 className="font-[var(--font-playfair)] text-4xl md:text-5xl font-semibold text-charcoal mb-6 leading-tight">
-                About Lil
+                Midwife, Life Coach <span className="text-charcoal-light italic">&amp;</span>{" "}
+                <span className="text-sage">Motherhood Advocate</span>
               </h2>
               <div className="decorative-line !mx-0" />
 

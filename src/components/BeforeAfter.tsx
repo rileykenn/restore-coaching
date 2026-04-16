@@ -40,7 +40,7 @@ export default function BeforeAfter() {
               The Transformation
             </p>
             <h2 className="font-[var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl font-semibold text-charcoal mb-4 leading-tight">
-              The Restore Shift
+              The Parent Restore Shift
             </h2>
             <div className="decorative-line" />
             <p className="mt-8 text-charcoal-light max-w-3xl mx-auto leading-relaxed text-xl">
