@@ -32,7 +32,7 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-sage tracking-[0.3em] uppercase text-base mb-6 font-medium"
             >
-              Midwife & Life Coach
+              Midwife, Parent &amp; Life Coach
             </motion.p>
 
             <motion.h1

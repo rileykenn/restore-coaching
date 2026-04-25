@@ -6,10 +6,10 @@ import Link from "next/link";
 const footerLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
+  { label: "Work With Me", href: "/services" },
   { label: "Packages", href: "/packages" },
   { label: "Testimonials", href: "/testimonials" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact / Book", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -28,14 +28,15 @@ export default function Footer() {
                 className="h-14 w-auto brightness-0 invert opacity-90"
               />
             </div>
+            <p className="text-white/80 font-medium mb-2">
+              Restore Coaching with Lil
+            </p>
             <p className="text-white/60 leading-relaxed text-base">
-              Supporting women and families through the emotional journey of
-              parenthood. From birth story healing to confident, emotionally
-              aware parenting.
+              Helping you move from reactive patterns into calm, confident connection.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links + Contact */}
           <div>
             <h3 className="font-medium text-white mb-5 tracking-wide text-lg">
               Quick Links
@@ -52,6 +53,20 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-8">
+              <h3 className="font-medium text-white mb-3 tracking-wide text-base">
+                Contact
+              </h3>
+              <ul className="space-y-2 text-white/60 text-base">
+                <li>
+                  <a href="mailto:lil@restore.coach" className="hover:text-sage-light transition-colors">
+                    lil@restore.coach
+                  </a>
+                </li>
+                <li>Newcastle / Lake Macquarie / Online Australia &amp; NZ</li>
+              </ul>
+            </div>
           </div>
 
           {/* Credentials */}

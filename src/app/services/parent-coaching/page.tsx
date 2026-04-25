@@ -2,169 +2,175 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import ServicePageHero from "@/components/ServicePageHero";
 import ScrollReveal from "@/components/ScrollReveal";
-
+import ServicePageHero from "@/components/ServicePageHero";
 import BeforeAfter from "@/components/BeforeAfter";
-import ProgramWeeks from "@/components/ProgramWeeks";
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { GraduationCap, HandHeart, ArrowDown } from "lucide-react";
+import { useRef } from "react";
+import { Leaf, Compass, Battery, Brain, Target, HeartHandshake, Star, Sparkles, HandHeart, Check } from "lucide-react";
 
-const subServices = [
+const weeks = [
   {
-    id: "program",
-    title: "The Program",
-    subtitle: "Restore Confident Parenting",
-    detail: "7 Week Program + Integration Session",
-    detail2: "Guided by the RESTORE Method",
-    Icon: GraduationCap,
-    color: "sage" as const,
+    week: "Week 1",
+    restoreWord: "Recognise",
+    title: "Reconnect with your values, your vision, and the parent you want to be.",
+    outcome: "You begin to feel grounded and clear in what matters most.",
+    Icon: Leaf,
   },
   {
-    id: "ongoing",
-    title: "Monthly Ongoing Support",
-    subtitle: "Restore Parent Coaching",
-    detail: "",
-    detail2: "",
-    Icon: HandHeart,
-    color: "sage" as const,
+    week: "Week 2",
+    restoreWord: "Explore",
+    title: "Build awareness of your patterns and responses.",
+    outcome: "Parenting shifts from autopilot into conscious awareness.",
+    Icon: Compass,
+  },
+  {
+    week: "Week 3",
+    restoreWord: "Shift",
+    title: "Release patterns that drain your energy and create disconnection.",
+    outcome: "Begin aligning with calm, connection, and resilience.",
+    Icon: Battery,
+  },
+  {
+    week: "Week 4",
+    restoreWord: "Transform",
+    title: "Strengthen your ability to regulate in real time.",
+    outcome: "Move from overwhelm into clarity and steadiness.",
+    Icon: Brain,
+  },
+  {
+    week: "Week 5",
+    restoreWord: "Own",
+    title: "Let go of guilt, pressure, and expectations that are not yours to carry.",
+    outcome: "Step into more confidence in how you show up.",
+    Icon: Target,
+  },
+  {
+    week: "Week 6",
+    restoreWord: "Reinforce",
+    title: "Strengthen emotional connection through everyday interactions.",
+    outcome: "Build consistency, trust, and emotional safety.",
+    Icon: HeartHandshake,
+  },
+  {
+    week: "Week 7",
+    restoreWord: "Embody",
+    title: "Live the shift with greater confidence and consistency in daily parenting.",
+    outcome: "",
+    Icon: Star,
+  },
+  {
+    week: "1 Month Later",
+    restoreWord: "Integrate",
+    title: "Ongoing support to embed change into real life and strengthen new patterns as challenges arise.",
+    outcome: "",
+    Icon: Sparkles,
   },
 ];
 
-const colorStyles = {
-  sage: { bg: "bg-sage/10", text: "text-sage", border: "border-sage/30", activeBg: "bg-sage" },
-};
-
 export default function ParentCoachingPage() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const [activeTab, setActiveTab] = useState("program");
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <>
       <ServicePageHero
         label="Parent Coaching"
         title="Parent Coaching"
-        subtitle="One on one support to help you parent with calm, clarity, and confidence."
+        subtitle="One-to-one support to help you move from reactive patterns into calm, confident, and connected parenting."
       />
 
-      {/* 3 Sub-Service Tabs */}
-      <section className="bg-warm-white py-12">
-        <div className="max-w-[1200px] mx-auto px-8 xl:px-12">
-          <div
-            ref={ref}
-            className="grid md:grid-cols-2 gap-6 max-w-[800px] mx-auto"
-          >
-            {subServices.map((service, i) => {
-              const IconComponent = service.Icon;
-              const styles = colorStyles[service.color];
-              const isActive = activeTab === service.id;
-              return (
-                <motion.button
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: i * 0.12, duration: 0.6 }}
-                  onClick={() => {
-                    setActiveTab(service.id);
-                    const el = document.getElementById(`section-${service.id}`);
-                    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }}
-                  className={`text-left rounded-3xl p-8 md:p-10 border transition-all duration-500 hover:-translate-y-1 ${
-                    isActive
-                      ? `${styles.border} shadow-xl bg-white`
-                      : "border-sage/10 bg-white/60 hover:border-sage/20 shadow-sm"
-                  }`}
-                >
-                  <div
-                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 ${
-                      isActive ? `${styles.activeBg} text-white` : styles.bg
-                    }`}
-                  >
-                    <IconComponent className={`w-7 h-7 ${isActive ? "text-white" : styles.text}`} />
-                  </div>
-                  <h3 className="font-[var(--font-playfair)] text-xl font-semibold text-charcoal mb-1">
-                    {service.title}
-                  </h3>
-                  <p className={`text-base font-medium ${styles.text}`}>
-                    {service.subtitle}
-                  </p>
-                  {service.detail && (
-                    <p className="text-charcoal-light text-sm mt-2">
-                      {service.detail}
-                    </p>
-                  )}
-                  {service.detail2 && (
-                    <p className="text-sage italic text-sm">
-                      {service.detail2}
-                    </p>
-                  )}
-                  {isActive && (
-                    <div className="flex items-center gap-1 mt-4 text-sage text-sm font-medium">
-                      <ArrowDown className="w-4 h-4" /> View below
-                    </div>
-                  )}
-                </motion.button>
-              );
-            })}
-          </div>
+      {/* ═══════════════════════════════════════════
+          PRIMARY BOX: Restore Confident Parenting
+      ═══════════════════════════════════════════ */}
+      <section className="section-padding bg-cream">
+        <div className="max-w-[1000px] mx-auto px-8 xl:px-12">
+          <ScrollReveal>
+            <div className="bg-white rounded-3xl p-10 md:p-14 shadow-sm border border-sage/10">
+              <h2 className="font-[var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl font-semibold text-charcoal mb-2 leading-tight">
+                Restore Confident Parenting
+              </h2>
+              <p className="text-sage font-medium text-lg mb-8">
+                7-Week Transformational Program + Integration Session
+              </p>
+
+              <div className="space-y-5 text-charcoal-light leading-relaxed text-lg">
+                <p className="text-sage font-medium italic">
+                  Parent coaching with RESTORE begins here.
+                </p>
+                <p>
+                  This structured program helps you understand the patterns driving
+                  your reactions&mdash;your triggers, emotional responses, and automatic
+                  behaviours&mdash;so you can begin responding with greater awareness
+                  and intention in everyday parenting moments.
+                </p>
+                <p className="text-charcoal font-medium">
+                  As this awareness builds, real change begins to show up at home:
+                </p>
+                <ul className="space-y-3 ml-2">
+                  {[
+                    "more pause instead of reaction",
+                    "calmer communication",
+                    "emotionally safer interactions with your child",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p>
+                  Over time, behaviour softens, connection deepens, and parenting
+                  feels more intentional and less overwhelming.
+                </p>
+                <p>
+                  A guided manual supports you in moving from reactive parenting into
+                  calm, confident, emotionally regulated responses&mdash;giving you
+                  practical tools for real-life moments.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          SECTION 1: Restore Confident Parenting
+          Program Detail + Journey
       ═══════════════════════════════════════════ */}
-      <section id="section-program" className="section-padding bg-cream">
+      <section className="section-padding bg-warm-white">
         <div className="max-w-[1000px] mx-auto px-8 xl:px-12">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="font-[var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl font-semibold text-charcoal mb-4 leading-tight">
                 Restore Confident Parenting
               </h2>
-              <p className="text-sage font-medium text-lg">
-                7 Week Program + Integration Session · Guided by the RESTORE Method
-              </p>
               <div className="decorative-line" />
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="space-y-6 text-charcoal-light leading-relaxed text-lg mb-16">
-              <p className="text-xl text-charcoal font-medium">
-                Lead your child with calm, clarity, and confidence&mdash;no matter their age or stage.
-              </p>
-              <p className="text-sage font-medium italic">
-                Parent coaching with Restore starts here.
+            <div className="space-y-5 text-charcoal-light leading-relaxed text-lg mb-16 max-w-3xl mx-auto">
+              <p>
+                Within the RESTORE Confident Parenting Journey, each step builds
+                your awareness, strengthens emotional regulation, and supports
+                lasting change in how you show up in parenting.
               </p>
               <p>
-                This is the foundation every parent needs&mdash;but few are ever shown.
-                The good news? It&apos;s never too late to build it.
-              </p>
-              <p>
-                When parenting starts to feel overwhelming, the answer isn&apos;t doing
-                more&mdash;it&apos;s becoming more aware. This program helps you understand
-                your patterns, triggers, and responses so you can show up with intention.
-              </p>
-              <p>
-                As you shift, your child shifts. Patterns change, connection deepens,
-                and emotional safety grows.
-              </p>
-              <p className="font-medium text-charcoal">
-                This is where you begin to lead your parenting, rather than feel led
-                by your child&apos;s behaviour.
+                This program is guided by a structured manual developed by
+                psychologist Dr Jenny Brown, who has over 30 years&apos; experience
+                working with families since the 1980s.
               </p>
             </div>
           </ScrollReveal>
         </div>
 
-        {/* Pathway Diagram */}
+        {/* New Pathway Diagram */}
         <div className="max-w-[1600px] mx-auto px-8 xl:px-12">
           <ScrollReveal delay={0.15}>
             <div className="mb-16 rounded-2xl overflow-hidden shadow-lg border border-sage/10">
               <Image
                 src="/SRSDiagramPosterSize.png"
-                alt="Restore Confident Parenting 7 week program pathway visual showing the RESTORE Method journey from Reflect through Evolve"
+                alt="Restore Confident Parenting Journey — a structured pathway from awareness to confident, embodied parenting: Recognise, Explore, Shift, Transform, Own, Reinforce, Embody"
                 width={1400}
                 height={450}
                 className="w-full h-auto"
@@ -173,19 +179,123 @@ export default function ParentCoachingPage() {
           </ScrollReveal>
         </div>
 
-        {/* Week-by-week Accordion */}
-        <ProgramWeeks />
+        {/* Week-by-week as static boxes */}
+        <div className="bg-warm-white py-12">
+          <div className="max-w-[1600px] mx-auto px-8 xl:px-12">
+            <ScrollReveal>
+              <div className="text-center mb-14">
+                <h3 className="font-[var(--font-playfair)] text-2xl md:text-3xl font-semibold text-charcoal mb-4">
+                  Restore Confident Parenting Journey
+                </h3>
+                <p className="text-charcoal-light text-lg max-w-2xl mx-auto leading-relaxed">
+                  This isn&apos;t about learning more strategies. It&apos;s about
+                  becoming the parent you already have the capacity to be.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid lg:grid-cols-[1fr_380px] gap-12 items-start">
+              {/* Left: Week boxes */}
+              <div ref={ref} className="space-y-4">
+                {weeks.map((week, i) => {
+                  const IconComponent = week.Icon;
+                  return (
+                    <ScrollReveal key={i} delay={i * 0.05}>
+                      <div className="border rounded-2xl overflow-hidden border-sage/10 bg-white shadow-sm">
+                        <div className="flex items-center gap-5 p-6">
+                          <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <IconComponent className="w-6 h-6 text-sage" />
+                          </div>
+                          <div className="flex-1">
+                            <span className="text-sage text-base font-medium block">
+                              {week.week}{" "}
+                              <span className="text-rose-dark">· {week.restoreWord}</span>
+                            </span>
+                            <span className="font-[var(--font-playfair)] text-lg text-charcoal font-medium">
+                              {week.title}
+                            </span>
+                          </div>
+                        </div>
+                        {week.outcome && (
+                          <div className="px-6 pb-6 pt-0">
+                            <div className="bg-sage/5 rounded-xl p-5">
+                              <p className="text-base text-sage-dark">
+                                {week.outcome}
+                              </p>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </ScrollReveal>
+                  );
+                })}
+              </div>
+
+              {/* Right: Decorative illustration */}
+              <ScrollReveal delay={0.2}>
+                <div className="hidden lg:block sticky top-32">
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-br from-sage/10 to-rose/10 rounded-3xl blur-xl" />
+                    <Image
+                      src="/media/media1.png"
+                      alt="Nurturing mother and child illustration"
+                      width={500}
+                      height={625}
+                      className="relative w-full h-auto rounded-2xl"
+                    />
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </div>
+
+        {/* Pricing Box */}
+        <div className="max-w-[700px] mx-auto px-8 xl:px-12 mt-12">
+          <ScrollReveal delay={0.2}>
+            <div className="bg-sage/5 rounded-3xl p-10 md:p-12 border border-sage/20 text-center">
+              <h3 className="font-[var(--font-playfair)] text-2xl md:text-3xl font-semibold text-charcoal mb-2">
+                Restore Confident Parenting
+              </h3>
+              <p className="text-sage font-medium text-lg mb-6">
+                7-Week Transformational Program + Integration Session
+              </p>
+              <ul className="space-y-3 text-charcoal-light text-lg mb-6 text-left max-w-md mx-auto">
+                {[
+                  "Structured, guided coaching using the RESTORE framework",
+                  "Psychologist-informed, manual-based process",
+                  "Focus on emotional regulation, awareness, and parenting responses",
+                  "Integration session to support real-life application",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="font-[var(--font-playfair)] text-4xl font-semibold text-charcoal mb-6">
+                $2,090 <span className="text-lg font-normal text-charcoal-light">AUD</span>
+              </p>
+              <Link
+                href="/book"
+                className="px-10 py-5 bg-sage text-white rounded-full text-lg font-medium hover:bg-sage-dark transition-all duration-300 hover:shadow-xl hover:shadow-sage/20 hover:-translate-y-0.5 inline-block"
+              >
+                Book Program
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          SECTION 2: Ongoing Support
+          Ongoing Parent Coaching (full-width section)
       ═══════════════════════════════════════════ */}
-      <section id="section-ongoing" className="section-padding bg-warm-white">
+      <section className="section-padding bg-cream">
         <div className="max-w-[1000px] mx-auto px-8 xl:px-12">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="font-[var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl font-semibold text-charcoal mb-4 leading-tight">
-                Ongoing Support: Restore Parent & Life Coaching
+                Ongoing Parent Coaching
               </h2>
               <div className="decorative-line" />
             </div>
@@ -197,24 +307,29 @@ export default function ParentCoachingPage() {
                 <HandHeart className="w-8 h-8 text-sage flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-sage-dark text-lg font-medium italic">
-                    Support when you need it most.
+                    Continued support as you integrate and live the RESTORE work
                   </p>
                 </div>
               </div>
               <div className="space-y-5 text-charcoal-light leading-relaxed text-lg">
                 <p>
+                  After completing the Restore Confident Parenting program, many
+                  parents choose to continue with ongoing support as they apply the
+                  work in real-life parenting situations.
+                </p>
+                <p>
                   Parenting doesn&apos;t follow a perfect timeline, and neither should support.
                 </p>
                 <p>
-                  This flexible, ongoing coaching option is available at any stage
-                  of your parenting journey. Whether you&apos;re navigating a specific
-                  challenge or wanting deeper, long term growth, you&apos;ll have
+                  This flexible coaching option is available at any stage of your
+                  parenting journey. Whether you&apos;re navigating a specific
+                  challenge or wanting deeper, long-term growth, you&apos;ll have
                   access to guidance, perspective, and practical support when you
                   need it.
                 </p>
                 <p>
                   We continue working together for as long as you need, supporting
-                  you through both immediate challenges and long term transformation.
+                  both immediate challenges and long-term transformation.
                 </p>
               </div>
             </div>
@@ -232,8 +347,6 @@ export default function ParentCoachingPage() {
           </ScrollReveal>
         </div>
       </section>
-
-
 
       <BeforeAfter />
     </>

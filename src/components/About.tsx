@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
 
 export default function About() {
@@ -13,15 +14,14 @@ export default function About() {
             <div className="relative flex justify-center">
               <div className="absolute -inset-8 bg-gradient-to-br from-sage/10 to-rose/10 rounded-full blur-2xl" />
               <div className="relative max-w-lg w-full">
-                {/* Placeholder until Lil's headshot is uploaded */}
-                <div className="w-full aspect-[4/5] bg-gradient-to-br from-sage/10 to-rose/10 rounded-2xl flex items-center justify-center border border-sage/10">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-sage text-4xl font-[var(--font-playfair)]">L</span>
-                    </div>
-                    <p className="text-sage font-medium text-lg">Lil&apos;s Photo</p>
-                  </div>
-                </div>
+                <Image
+                  src="/lil.jpeg"
+                  alt="Lil — Midwife, Parent Coach & Motherhood Advocate"
+                  width={600}
+                  height={750}
+                  className="w-full h-auto rounded-2xl object-cover shadow-lg"
+                  priority
+                />
               </div>
             </div>
           </ScrollReveal>
@@ -33,7 +33,7 @@ export default function About() {
                 About Lil
               </p>
               <h2 className="font-[var(--font-playfair)] text-4xl md:text-5xl font-semibold text-charcoal mb-6 leading-tight">
-                Midwife, Life Coach <span className="text-charcoal-light italic">&amp;</span>{" "}
+                Midwife, Parent Coach <span className="text-charcoal-light italic">&amp;</span>{" "}
                 <span className="text-sage">Motherhood Advocate</span>
               </h2>
               <div className="decorative-line !mx-0" />
@@ -68,15 +68,41 @@ export default function About() {
                   reshaped both my parenting and my life, and I couldn&apos;t
                   believe the impact it had on my family.
                 </p>
-                <p className="text-sage font-semibold text-xl">
-                  As you begin to trust in yourself, you begin to trust in your child.
+
+                {/* Dr Jenny Brown section */}
+                <p>
+                  It was during this season that I was introduced to the work of
+                  Dr Jenny Brown, a psychologist with over 30 years&apos; experience
+                  supporting families.
                 </p>
                 <p>
-                  It was from this place that I felt a deep drive to create
-                  something more&mdash;not just for myself, but for other
-                  families. I founded this business with a clear vision: to build
-                  a supportive community that advocates for families and honours
-                  the complexity of modern parenting.
+                  Her program, <span className="font-medium text-charcoal">Parent Hope Project</span>,
+                  became the turning point in my parenting journey. It gave me a
+                  framework to understand behaviour, emotional regulation, and my
+                  role within the family dynamic in a way that finally created
+                  real and lasting change in our home.
+                </p>
+                <p className="text-sage font-semibold text-xl">
+                  As I began to trust in myself, I began to trust in my child,
+                  and this work gave me the framework to do that.
+                </p>
+                <p>
+                  It was from this place that I felt a deep drive to bring this
+                  work to other families&mdash;because I had experienced firsthand
+                  the kind of change that is possible. I am formally trained in
+                  and deliver this program as part of my coaching practice, and
+                  today it forms the foundation of my Restore Confident Parenting
+                  program, where I guide parents through these same proven
+                  principles in a supported and practical way.
+                </p>
+                <p>
+                  Alongside this, through my work in midwifery, early motherhood
+                  support, life coaching and emotional intelligence coaching, I
+                  began to see consistent patterns across the families and
+                  individuals I was supporting. From this, I developed the
+                  RESTORE Method, my own structured coaching approach that
+                  integrates these insights into a broader framework for personal
+                  and relational transformation.
                 </p>
                 <p>
                   Today, as a heart-led parent coach, I bring together decades
@@ -93,10 +119,16 @@ export default function About() {
                   I guide parents inward, so they can lead their families with
                   clarity, connection, and capacity.
                 </p>
-                <p className="font-[var(--font-playfair)] text-2xl text-charcoal italic">
-                  Because every parent deserves the support to not just
-                  cope&mdash;but to truly thrive.
-                </p>
+              </div>
+
+              {/* Work with Me CTA */}
+              <div className="mt-10">
+                <Link
+                  href="/services"
+                  className="px-10 py-5 bg-sage text-white rounded-full text-lg font-medium hover:bg-sage-dark transition-all duration-300 hover:shadow-xl hover:shadow-sage/20 hover:-translate-y-0.5 inline-block"
+                >
+                  Work with Me
+                </Link>
               </div>
             </div>
           </ScrollReveal>

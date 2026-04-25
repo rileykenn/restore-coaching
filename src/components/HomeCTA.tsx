@@ -14,28 +14,42 @@ export default function HomeCTA() {
             </p>
             <h2 className="font-[var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl font-semibold text-charcoal mb-6 leading-tight">
               Ready to begin your{" "}
-              <span className="text-sage">journey?</span>
+              <span className="text-sage">shift?</span>
             </h2>
             <div className="decorative-line" />
-            <p className="mt-8 text-charcoal-light max-w-2xl mx-auto leading-relaxed text-xl mb-10">
-              Whether you&apos;re navigating the early days of parenthood, looking
-              for support with your parenting, or wanting to understand your
-              emotional intelligence, I&apos;m here to help.
-            </p>
+            <div className="mt-8 text-charcoal-light max-w-2xl mx-auto leading-relaxed text-xl mb-10 space-y-5">
+              <p>
+                If this resonates with where you are right now, you don&apos;t
+                need to keep navigating it alone.
+              </p>
+              <p>
+                Together, we create space to understand what&apos;s happening
+                beneath the surface, break reactive patterns, and support you to
+                show up with more calm, clarity, and confidence in your life,
+                relationships, and parenting.
+              </p>
+              <p>
+                Change doesn&apos;t happen all at once, it begins in moments of
+                awareness, support, and a willingness to do things differently.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <Link
-                href="/contact"
+                href="/book"
                 className="px-10 py-5 bg-sage text-white rounded-full text-lg font-medium hover:bg-sage-dark transition-all duration-300 hover:shadow-xl hover:shadow-sage/20 hover:-translate-y-0.5"
               >
-                Book a Call
+                Book a Session
               </Link>
               <Link
-                href="/services"
+                href="/contact"
                 className="px-10 py-5 border-2 border-sage text-sage rounded-full text-lg font-medium hover:bg-sage hover:text-white transition-all duration-300"
               >
-                Explore Services
+                Enquire Here
               </Link>
             </div>
+            <p className="mt-8 text-charcoal-light text-lg italic font-[var(--font-playfair)]">
+              Let&apos;s take the next step together.
+            </p>
           </div>
         </ScrollReveal>
       </div>

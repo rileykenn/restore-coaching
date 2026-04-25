@@ -2,17 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
+  { label: "Work With Me", href: "/services" },
   { label: "Packages", href: "/packages" },
   { label: "Testimonials", href: "/testimonials" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact / Book", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -45,15 +45,15 @@ export default function Navbar() {
       <div className="max-w-[1600px] mx-auto px-8 xl:px-12">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/newlogo.png"
-              alt="Restore Coaching"
-              width={320}
-              height={120}
-              className="h-28 w-auto"
-              priority
-            />
+          <Link href="/" className="group flex items-center gap-3">
+            <div className="flex flex-col leading-none">
+              <span className="font-[var(--font-playfair)] text-2xl md:text-[1.7rem] font-semibold text-charcoal tracking-tight group-hover:text-sage transition-colors duration-300">
+                Restore
+              </span>
+              <span className="text-[0.65rem] md:text-[0.7rem] tracking-[0.35em] uppercase text-sage font-medium mt-0.5">
+                Coaching
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Links */}
@@ -72,10 +72,10 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/book"
               className="px-8 py-3.5 bg-sage text-white text-base font-medium rounded-full hover:bg-sage-dark transition-all duration-300 hover:shadow-lg hover:shadow-sage/20"
             >
-              Book a Call
+              Book a Session
             </Link>
           </div>
 
@@ -131,10 +131,10 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href="/book"
                 className="mt-2 px-8 py-4 bg-sage text-white text-center text-lg rounded-full hover:bg-sage-dark transition-all duration-300"
               >
-                Book a Call
+                Book a Session
               </Link>
             </div>
           </motion.div>

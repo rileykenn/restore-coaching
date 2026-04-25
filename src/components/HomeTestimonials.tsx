@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
-import { motion, useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { Star, ArrowRight } from "lucide-react";
 
 const featuredTestimonials = [
@@ -28,14 +28,12 @@ const featuredTestimonials = [
 ];
 
 export default function HomeTestimonials() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % featuredTestimonials.length);
-    }, 6000);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -45,16 +43,22 @@ export default function HomeTestimonials() {
         <ScrollReveal>
           <div className="text-center mb-16">
             <p className="text-sage tracking-[0.3em] uppercase text-base mb-4 font-medium">
-              What Others Say
+              Client Experiences
             </p>
             <h2 className="font-[var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl font-semibold text-charcoal mb-4 leading-tight">
-              Transforming Families
+              Real shifts. Real families. Real change.
             </h2>
             <div className="decorative-line" />
+            <p className="mt-6 text-charcoal-light max-w-3xl mx-auto text-xl leading-relaxed">
+              From reactive patterns to confident, connected parenting
+            </p>
+            <p className="mt-3 text-charcoal-light max-w-3xl mx-auto text-lg">
+              These are the kinds of shifts people experience through RESTORE Coaching:
+            </p>
           </div>
         </ScrollReveal>
 
-        <div ref={ref} className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             key={currentIndex}
             initial={{ opacity: 0, y: 20 }}
