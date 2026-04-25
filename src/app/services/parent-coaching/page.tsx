@@ -169,7 +169,7 @@ export default function ParentCoachingPage() {
           <ScrollReveal delay={0.15}>
             <div className="mb-16 rounded-2xl overflow-hidden shadow-lg border border-sage/10">
               <Image
-                src="/SRSDiagramPosterSize.png"
+                src="/FinalWebsiteSRSDiagram.png"
                 alt="Restore Confident Parenting Journey — a structured pathway from awareness to confident, embodied parenting: Recognise, Explore, Shift, Transform, Own, Reinforce, Embody"
                 width={1400}
                 height={450}
