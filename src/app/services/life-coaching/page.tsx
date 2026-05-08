@@ -11,10 +11,11 @@ const offerings = [
   {
     Icon: Compass,
     title: "Ongoing Life Coaching",
-    desc: "Regular, structured support for mindset shifts, identity exploration, and overcoming limiting beliefs. We work together on an ongoing basis to help you grow into the person you want to be.",
+    desc: "Regular, structured support for mindset shifts, identity work, and breaking through limiting beliefs. We work together over time to support your growth, helping you step into the version of yourself you\u2019re becoming.",
     price: "From $550 AUD/month",
     inclusions: [
-      "2 x 60-minute 1:1 coaching sessions per month",
+      "Tailored support with frequency of sessions based on your level of need",
+      "Structured sessions to help you grow and integrate change over time",
       "Ongoing email support between sessions",
       "Personalised action plans and reflections",
     ],

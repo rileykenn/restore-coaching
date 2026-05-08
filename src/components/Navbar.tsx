@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -46,6 +47,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-3">
+            <Image
+              src="/newlogo.png"
+              alt="Restore Coaching"
+              width={160}
+              height={60}
+              className="h-14 w-auto"
+              priority
+            />
             <div className="flex flex-col leading-none">
               <span className="font-[var(--font-playfair)] text-2xl md:text-[1.7rem] font-semibold text-charcoal tracking-tight group-hover:text-sage transition-colors duration-300">
                 Restore
